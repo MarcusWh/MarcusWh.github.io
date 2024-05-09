@@ -1,0 +1,14 @@
+
+
+body {
+  font-family: "helvitica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color:white;
+  background-color: rgb(19, 42, 56);
+}
+
+.button{
+    font-size: 20px;
+}
