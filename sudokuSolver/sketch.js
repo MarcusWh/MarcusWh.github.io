@@ -41,6 +41,7 @@ function draw() {
         }else{
             noFill();
         }
+        strokeWeight(2)
         rect(x,y,boxWidth,boxHeight);
         let txt = grid[i].val;
         push();
@@ -54,7 +55,7 @@ function draw() {
     pop()
     push();
     strokeWeight(5);
-    for (let i = 0;i<3;i++){
+    for (let i = 0;i<4;i++){
         line(3*i*boxWidth,0,3*i*boxWidth,height);
         line(0,3*i*boxHeight,width,3*i*boxHeight);
     }
@@ -218,7 +219,6 @@ function solve(){
         let col = grid[i].col;
         if (grid[i].val==0){
             for (let j=0;j<grid[i].poss.length;j++){
-            // for (let n=1;n<10;n++){
                 if (numberAllowed(row,col,grid[i].poss[j])){
                     grid[i].val=grid[i].poss[j];
                     if (solve()){
