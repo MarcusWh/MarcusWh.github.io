@@ -34,7 +34,7 @@ function setup() {
 }
 
 function draw() {
-  background(40, 20, 60);
+  background(19, 42, 56);
   translate(width / 2, height / 2);
   for (let i = 0; i < particles.length; i++) {
     particles[i].draw();
