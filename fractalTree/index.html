@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Fractal Tree</title>
+    <!-- <style> body {padding: 0; margin: 0;} </style> -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="../p5.js"></script>
+  </head>
+  <body>
+    <div class="container fullHeight">
+      <div class="jumbotron fullHeight">
+        <h2>Fractal tree</h2>
+        <table class="table table-sm">
+          <tbody>
+            <tr>
+              <th>Trunk length</th>
+              <td>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="70"
+                  class="slider"
+                  id="lineLength"
+                  oninput="updateLength(this.value)"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th class="narrowCol">Left angle size</th>
+              <td class="fullCol">
+                <input
+                  type="range"
+                  min="-314"
+                  max="314"
+                  value="-100"
+                  class="slider"
+                  id="leftAngle"
+                  oninput="updateLeftAngle(this.value)"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th class="narrowCol">Right angle size</th>
+              <td class="fullCol">
+                <input
+                  type="range"
+                  min="-314"
+                  max="314"
+                  value="80"
+                  class="slider"
+                  id="rightAngle"
+                  oninput="updateRightAngle(this.value)"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th class="narrowCol">Left branch size</th>
+              <td class="fullCol">
+                <input
+                  type="range"
+                  min="0"
+                  max="70"
+                  value="65"
+                  class="slider"
+                  id="leftBranch"
+                  oninput="updateLeftBranch(this.value)"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th class="narrowCol">Right branch size</th>
+              <td class="fullCol">
+                <input
+                  type="range"
+                  min="0"
+                  max="70"
+                  value="60"
+                  class="slider"
+                  id="rightBranch"
+                  oninput="updateRightBranch(this.value)"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="canvasContainer"></div>
+      </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>

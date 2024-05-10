@@ -1,0 +1,18 @@
+body {
+  font-family: "helvitica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  background-color: rgb(19, 42, 56);
+  text-align: left;
+}
+
+table {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+input {
+  margin-left: 50px;
+}
