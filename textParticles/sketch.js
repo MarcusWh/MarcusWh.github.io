@@ -18,6 +18,7 @@ let words = [
   "gratitude",
 ];
 let wordCounter = 0;
+let r = 0;
 
 function preload() {
   font = loadFont("Merriweather-Bold.ttf");
@@ -69,5 +70,9 @@ function resetParticles() {
   wordCounter++;
   if (wordCounter == words.length) {
     wordCounter = 0;
+  }
+  r++;
+  if (r == 3) {
+    r = 0;
   }
 }
