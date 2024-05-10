@@ -56,11 +56,13 @@ function resetParticles() {
     sampleFactor: 0.1,
   });
   bounds = font.textBounds(words[wordCounter], 0, 0, 200);
+  let r = floor(random(3));
   for (let i = 0; i < points.length; i++) {
     particles[i] = new Particle(
       points[i].x - bounds.w / 2,
       points[i].y - bounds.y - bounds.h / 2,
-      i
+      i,
+      r
     );
   }
   counter = 0;

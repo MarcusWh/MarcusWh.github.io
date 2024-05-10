@@ -1,6 +1,5 @@
 class Particle {
-  constructor(x, y, i) {
-    let r = floor(random(3));
+  constructor(x, y, i, r) {
     this.chooseStart(r);
     this.tx = x;
     this.ty = y;
@@ -24,7 +23,7 @@ class Particle {
     } else if (r == 1) {
       this.x = random(width) - width / 2;
       this.y = random(height) - height / 2;
-    } else if (r == 3) {
+    } else if (r == 2) {
       this.x = i * 3;
       this.y = 100;
     }
