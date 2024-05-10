@@ -41,7 +41,10 @@ function updateRightBranch(value) {
 
 function draw() {
   background(19, 42, 56);
-  rect(0, 0, width, height);
+  push();
+  strokeWeight(2);
+  rect(1, 1, width - 1, height - 2);
+  pop();
   makeBranch(width / 2, height * 0.9, (height / 400) * length, 0);
 }
 
