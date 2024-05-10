@@ -59,13 +59,13 @@ function resetParticles() {
   for (let i = 0; i < points.length; i++) {
     particles[i] = new Particle(
       points[i].x - bounds.w / 2,
-      points[i].y - bounds.y - bounds.h / 2,
+      points[i].y - bounds.y - bounds.h,
       i
     );
   }
   counter = 0;
   wordCounter++;
-  if (wordCounter > words.length) {
+  if (wordCounter == words.length) {
     wordCounter = 0;
   }
 }
