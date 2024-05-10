@@ -45,6 +45,7 @@ function draw() {
       points = font.textToPoints(words[wordCounter], 0, 0, 200, {
         sampleFactor: 0.1,
       });
+      counter = 0;
       wordCounter++;
       if (wordCounter > words.length) {
         wordCounter = 0;
