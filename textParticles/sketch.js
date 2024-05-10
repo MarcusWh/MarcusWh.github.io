@@ -16,7 +16,7 @@ function setup() {
   let wid = div.offsetWidth;
   let cnv = createCanvas(wid, wid * 0.8);
   cnv.parent("canvasContainer");
-  //   points = font.textToPoints(twords[wordCounter]xt, 0, 0, 200, {
+  //   points = font.textToPoints(words[wordCounter], 0, 0, 200, {
   //     sampleFactor: 0.1,
   //   });
   //   bounds = font.textBounds(words[wordCounter], 0, 0, 200);
@@ -39,7 +39,7 @@ function draw() {
     particles[i].draw();
   }
   if (counter > particles.length + 360) {
-    resetParticles(); //included?
+    resetParticles();
   }
   counter++;
 }
