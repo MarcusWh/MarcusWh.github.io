@@ -1,9 +1,9 @@
 class Particle {
   constructor(x, y, i, r) {
-    this.chooseStart(r);
     this.tx = x;
     this.ty = y;
     this.i = i;
+    this.chooseStart(r);
     this.speed = this.chooseSpeed();
   }
   draw() {
@@ -24,7 +24,7 @@ class Particle {
       this.x = random(width) - width / 2;
       this.y = random(height) - height / 2;
     } else if (r == 2) {
-      this.x = i * 3;
+      this.x = this.i * 3;
       this.y = 100;
     }
   }
