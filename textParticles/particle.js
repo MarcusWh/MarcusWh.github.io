@@ -7,8 +7,8 @@ class Particle {
     this.speed = this.chooseSpeed();
   }
   draw() {
+    circle(this.x, this.y, 3);
     if (counter > this.i) {
-      circle(this.x, this.y, 3);
       this.x = this.x + (this.tx - this.x) / this.speed;
       this.y = this.y + (this.ty - this.y) / this.speed;
     }
