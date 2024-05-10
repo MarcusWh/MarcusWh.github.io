@@ -14,19 +14,8 @@ function preload() {
 
 function setup() {
   let wid = div.offsetWidth;
-  let cnv = createCanvas(wid, wid * 0.8);
+  let cnv = createCanvas(wid, 650);
   cnv.parent("canvasContainer");
-  //   points = font.textToPoints(words[wordCounter], 0, 0, 200, {
-  //     sampleFactor: 0.1,
-  //   });
-  //   bounds = font.textBounds(words[wordCounter], 0, 0, 200);
-  //   for (let i = 0; i < points.length; i++) {
-  //     particles[i] = new Particle(
-  //       points[i].x - bounds.w / 2,
-  //       points[i].y - bounds.y - bounds.h / 2,
-  //       i
-  //     );
-  //   }
   resetParticles();
   noStroke();
   fill(255);
