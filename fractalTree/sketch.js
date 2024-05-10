@@ -49,7 +49,7 @@ function draw() {
 }
 
 function makeBranch(startX, startY, length, angle) {
-  if (length > 2) {
+  if (length > 1) {
     let endX = startX + length * sin(angle);
     let endY = startY - length * cos(angle);
     line(startX, startY, endX, endY);
