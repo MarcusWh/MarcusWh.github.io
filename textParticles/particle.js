@@ -1,7 +1,7 @@
 class Particle {
   constructor(x, y, i) {
-    this.x = width / -2;
-    this.y = height / -2;
+    let r = floor(random(3));
+    this.chooseStart(r);
     this.tx = x;
     this.ty = y;
     this.i = i;
@@ -16,5 +16,17 @@ class Particle {
   }
   chooseSpeed() {
     return 20;
+  }
+  chooseStart(r) {
+    if (r == 0) {
+      this.x = width / -2;
+      this.y = height / -2;
+    } else if (r == 1) {
+      this.x = random(width) - width / 2;
+      this.y = random(height) - height / 2;
+    } else if (r == 3) {
+      this.x = i * 3;
+      this.y = 100;
+    }
   }
 }
