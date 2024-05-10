@@ -5,7 +5,19 @@ let font;
 let particles;
 let bounds;
 let counter = 0;
-let words = ["awesome", "tranquil", "placid", "intricate"];
+let words = [
+  "awesome",
+  "tranquil",
+  "placid",
+  "intricate",
+  "focus",
+  "clarity",
+  "presence",
+  "accomplish",
+  "courage",
+  "belief",
+  "gratitude",
+];
 let wordCounter = 0;
 
 function preload() {
