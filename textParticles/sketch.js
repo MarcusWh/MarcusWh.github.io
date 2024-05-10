@@ -34,16 +34,11 @@ function setup() {
 function draw() {
   background(40, 20, 60);
   translate(width / 2, height / 2);
-
-  particles = [];
   for (let i = 0; i < particles.length; i++) {
     particles[i].draw();
   }
   if (counter > particles.length + 360) {
-    for (let i = 0; i < particles.length; i++) {
-      particles[i].x = random(width) - width / 2;
-      particles[i].y = random(height) - height / 2;
-    }
+    resetParticles(); //included?
   }
   counter++;
 }
