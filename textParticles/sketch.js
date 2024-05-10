@@ -4,13 +4,13 @@ let points;
 let font;
 let particles = [];
 let bounds;
+let counter = 0;
 
 function preload() {
   font = loadFont("Merriweather-Bold.ttf");
 }
 
 function setup() {
-  //   font = textFont("Verdana");
   let wid = div.offsetWidth;
   let cnv = createCanvas(wid, wid * 0.8);
   cnv.parent("canvasContainer");
@@ -37,7 +37,12 @@ function draw() {
   translate(width / 2, height / 2);
   for (let i = 0; i < particles.length; i++) {
     particles[i].draw();
+    if (counter > particles.length + 360) {
+      particles[i].x = random(width) - width / 2;
+      particles[i].y = random(height) - height / 2;
+    }
   }
+  counter++;
 }
 
 function windowResized() {
