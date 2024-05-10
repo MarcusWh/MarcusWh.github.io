@@ -13,7 +13,6 @@ let words = [
   "focus",
   "clarity",
   "presence",
-  "accomplish",
   "courage",
   "belief",
   "gratitude",
