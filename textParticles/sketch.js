@@ -2,7 +2,7 @@ let div = document.getElementById("canvasContainer");
 let txt = "particle";
 let points;
 let font;
-let particles = [];
+let particles;
 let bounds;
 let counter = 0;
 let words = ["awesome", "tranquil", "placid", "intricate"];
@@ -20,7 +20,6 @@ function setup() {
     sampleFactor: 0.1,
   });
   bounds = font.textBounds(words[wordCounter], 0, 0, 200);
-  // textAlign(CENTER,CENTER);
   for (let i = 0; i < points.length; i++) {
     particles[i] = new Particle(
       points[i].x - bounds.w / 2,
@@ -28,8 +27,6 @@ function setup() {
       i
     );
   }
-  // stroke(255);
-  // strokeWeight(1);
   noStroke();
   fill(255);
 }
@@ -37,6 +34,8 @@ function setup() {
 function draw() {
   background(40, 20, 60);
   translate(width / 2, height / 2);
+
+  particles = [];
   for (let i = 0; i < particles.length; i++) {
     particles[i].draw();
   }
@@ -45,14 +44,6 @@ function draw() {
       particles[i].x = random(width) - width / 2;
       particles[i].y = random(height) - height / 2;
     }
-    points = font.textToPoints(words[wordCounter], 0, 0, 200, {
-      sampleFactor: 0.1,
-    });
-    counter = 0;
-    wordCounter++;
-    if (wordCounter > words.length) {
-      wordCounter = 0;
-    }
   }
   counter++;
 }
@@ -60,4 +51,24 @@ function draw() {
 function windowResized() {
   let wid = div.offsetWidth;
   resizeCanvas(wid, wid * 0.8);
+}
+
+function resetParticles() {
+  particles = [];
+  points = [];
+  points = font.textToPoints(words[wordCounter], 0, 0, 200, {
+    sampleFactor: 0.1,
+  });
+  for (let i = 0; i < points.length; i++) {
+    particles[i] = new Particle(
+      points[i].x - bounds.w / 2,
+      points[i].y - bounds.y - bounds.h / 2,
+      i
+    );
+  }
+  counter = 0;
+  wordCounter++;
+  if (wordCounter > words.length) {
+    wordCounter = 0;
+  }
 }
