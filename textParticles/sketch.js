@@ -19,7 +19,7 @@ function setup() {
   points = font.textToPoints(txt, 0, 0, 200, {
     sampleFactor: 0.1,
   });
-  bounds = font.textBounds(txt, 0, 0, 200);
+  bounds = font.textBounds(words[wordCounter], 0, 0, 200);
   // textAlign(CENTER,CENTER);
   for (let i = 0; i < points.length; i++) {
     particles[i] = new Particle(
@@ -39,17 +39,19 @@ function draw() {
   translate(width / 2, height / 2);
   for (let i = 0; i < particles.length; i++) {
     particles[i].draw();
-    if (counter > particles.length + 360) {
+  }
+  if (counter > particles.length + 360) {
+    for (let i = 0; i < particles.length; i++) {
       particles[i].x = random(width) - width / 2;
       particles[i].y = random(height) - height / 2;
-      points = font.textToPoints(words[wordCounter], 0, 0, 200, {
-        sampleFactor: 0.1,
-      });
-      counter = 0;
-      wordCounter++;
-      if (wordCounter > words.length) {
-        wordCounter = 0;
-      }
+    }
+    points = font.textToPoints(words[wordCounter], 0, 0, 200, {
+      sampleFactor: 0.1,
+    });
+    counter = 0;
+    wordCounter++;
+    if (wordCounter > words.length) {
+      wordCounter = 0;
     }
   }
   counter++;
