@@ -5,6 +5,8 @@ let font;
 let particles = [];
 let bounds;
 let counter = 0;
+let words = ["awesome", "tranquil", "placid", "intricate"];
+let wordCounter = 0;
 
 function preload() {
   font = loadFont("Merriweather-Bold.ttf");
@@ -40,6 +42,13 @@ function draw() {
     if (counter > particles.length + 360) {
       particles[i].x = random(width) - width / 2;
       particles[i].y = random(height) - height / 2;
+      points = font.textToPoints(words[wordCounter], 0, 0, 200, {
+        sampleFactor: 0.1,
+      });
+      wordCounter++;
+      if (wordCounter > words.length) {
+        wordCounter = 0;
+      }
     }
   }
   counter++;
