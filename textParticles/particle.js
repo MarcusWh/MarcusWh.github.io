@@ -24,8 +24,8 @@ class Particle {
       this.x = random(width) - width / 2;
       this.y = random(height) - height / 2;
     } else if (r == 2) {
-      this.x = this.i * 3;
-      this.y = 100;
+      this.x = this.i * 3 - width / 2;
+      this.y = 100 - height / 2;
     }
   }
 }
