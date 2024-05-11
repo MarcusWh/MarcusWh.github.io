@@ -58,7 +58,7 @@ function resetParticles() {
   points = font.textToPoints(words[wordCounter], 0, 0, fSize, {
     sampleFactor: 0.1,
   });
-
+  bounds = font.textBounds(words[wordCounter], 0, 0, fSize);
   for (let i = 0; i < points.length; i++) {
     particles[i] = new Particle(
       points[i].x - bounds.w / 2,
