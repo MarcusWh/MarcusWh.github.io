@@ -26,7 +26,7 @@ function preload() {
 
 function setup() {
   let wid = div.offsetWidth;
-  let cnv = createCanvas(wid, 650);
+  let cnv = createCanvas(wid, wid * 0.6);
   cnv.parent("canvasContainer");
   resetParticles();
   noStroke();
@@ -53,10 +53,13 @@ function windowResized() {
 function resetParticles() {
   particles = [];
   points = [];
-  points = font.textToPoints(words[wordCounter], 0, 0, 200, {
+  bounds = font.textBounds(words[wordCounter], 0, 0, 200);
+  let wid = div.offsetWidth;
+  let fSize = (wid / bounds.z) * 180;
+  points = font.textToPoints(words[wordCounter], 0, 0, fSize, {
     sampleFactor: 0.1,
   });
-  bounds = font.textBounds(words[wordCounter], 0, 0, 200);
+
   for (let i = 0; i < points.length; i++) {
     particles[i] = new Particle(
       points[i].x - bounds.w / 2,
@@ -71,7 +74,7 @@ function resetParticles() {
     wordCounter = 0;
   }
   r++;
-  if (r == 3) {
+  if (r == 5) {
     r = 0;
   }
 }
