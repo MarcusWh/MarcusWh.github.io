@@ -26,7 +26,7 @@ function preload() {
 
 function setup() {
   let wid = div.offsetWidth;
-  let cnv = createCanvas(wid, wid * 0.6);
+  let cnv = createCanvas(wid, wid * 0.5);
   cnv.parent("canvasContainer");
   resetParticles();
   noStroke();
