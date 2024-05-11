@@ -26,15 +26,11 @@ class Particle {
     } else if (r == 2) {
       this.x = this.i * 3 - width / 2;
       this.y = 100 - height / 2;
-      if (this.x > width / 2) {
-        this.x = this.x - width;
-        this.y = 110 - height / 2;
-      } else if (this.x > width * 1.5) {
-        this.x = this.x - width * 2;
-        this.y = 120 - height / 2;
-      } else if (this.x > width * 2.5) {
-        this.x = this.x - width * 3;
-        this.y = 130 - height / 2;
+      for (let k = 0; k < 5; k++) {
+        if (this.x > width / 2) {
+          this.x = this.x - width;
+          this.y = this.y + 10;
+        }
       }
     } else if (r == 3) {
       this.x = 0;
