@@ -266,12 +266,15 @@ function draw() {
   for (let i = tiles.length - 1; i >= 0; i--) {
     tiles[i].draw();
   }
+  push();
+  noStroke();
   if (resetGame) {
     fill(0, 0, 0, 150);
     rect(width / 2, height / 2, width, height);
     fill(255);
     text("You solved the wall!\nClick to play again.", width / 2, height / 2);
   }
+  pop();
 }
 
 function touchStarted() {
