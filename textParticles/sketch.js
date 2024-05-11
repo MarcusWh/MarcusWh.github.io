@@ -47,7 +47,7 @@ function draw() {
 
 function windowResized() {
   let wid = div.offsetWidth;
-  resizeCanvas(wid, wid * 0.8);
+  resizeCanvas(wid, wid * 0.5);
 }
 
 function resetParticles() {
