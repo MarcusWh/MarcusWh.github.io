@@ -14,7 +14,7 @@
 
 <!-- the viewer container must have a defined size -->
 <body>
-  <button id="button1" onclick="button1Click">Andavadoaka</button>
+  <button id="button1">Andavadoaka</button>
   <div
     id="viewer"
     style="width: 100vw; height: 100vh; background-color: rgb(19, 42, 56)"
@@ -23,8 +23,8 @@
 
 <script>
   button1 = document.getElementById("button1");
-  button1.addEventListener("click", myScript);
-  function myScript(event) {
+  button1.addEventListener("click", button1click);
+  function button1click(event) {
     console.log(event);
   }
   panorama = "PXL_20220606_132700810.PHOTOSPHERE.jpg";
