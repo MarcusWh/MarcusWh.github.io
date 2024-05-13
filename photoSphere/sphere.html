@@ -14,7 +14,7 @@
 
 <!-- the viewer container must have a defined size -->
 <body>
-  <button onclick="button1Click">Andavadoaka</button>
+  <button id="button1" onclick="button1Click">Andavadoaka</button>
   <div
     id="viewer"
     style="width: 100vw; height: 100vh; background-color: rgb(19, 42, 56)"
@@ -22,7 +22,11 @@
 </body>
 
 <script>
+  button1 = document.getElementById("button1");
   button1.addEventListener("click", myScript);
+  function myScript(event) {
+    console.log(event);
+  }
   panorama = "PXL_20220606_132700810.PHOTOSPHERE.jpg";
   const viewer = new PhotoSphereViewer.Viewer({
     container: document.querySelector("#viewer"),
