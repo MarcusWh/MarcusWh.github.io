@@ -22,9 +22,7 @@
 </body>
 
 <script>
-  function button1Click(event) {
-    console.log(event);
-  }
+  button1.addEventListener("click", myScript);
   panorama = "PXL_20220606_132700810.PHOTOSPHERE.jpg";
   const viewer = new PhotoSphereViewer.Viewer({
     container: document.querySelector("#viewer"),
