@@ -6,6 +6,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"
   />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
@@ -14,7 +15,14 @@
 
 <!-- the viewer container must have a defined size -->
 <body>
-  <button id="button1">Andavadoaka</button>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+      <button id="pan1">photosphere 1</button>
+      <button id="pan2">photosphere 2</button>
+      <button id="pan3">photosphere 3</button>
+    </div>
+  </div>
   <div
     id="viewer"
     style="width: 100vw; height: 100vh; background-color: rgb(19, 42, 56)"
@@ -22,14 +30,24 @@
 </body>
 
 <script>
-  button1 = document.getElementById("button1");
-  button1.addEventListener("click", button1click);
-  function button1click(event) {
-    console.log(event);
-  }
-  panorama = "PXL_20220606_132700810.PHOTOSPHERE.jpg";
   const viewer = new PhotoSphereViewer.Viewer({
     container: document.querySelector("#viewer"),
-    panorama: panorama,
+    panorama: "pan1.jpg",
   });
+  // let panorama = "pan1.jpg";
+  let pan1 = document.getElementById("pan1");
+  pan1.addEventListener("click", pan1click);
+  function pan1click() {
+    viewer.setPanorama("pan1.jpg");
+  }
+  let pan2 = document.getElementById("pan2");
+  pan2.addEventListener("click", pan2click);
+  function pan2click() {
+    viewer.setPanorama("pan2.jpg");
+  }
+  let pan3 = document.getElementById("pan3");
+  pan3.addEventListener("click", pan3click);
+  function pan3click() {
+    viewer.setPanorama("pan3.jpg");
+  }
 </script>
