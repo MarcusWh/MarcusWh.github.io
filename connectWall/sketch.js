@@ -213,6 +213,9 @@ function copyQuestions() {
 function setup() {
   // frameRate(10);
   let canvw = div.offsetWidth;
+  if (canvw > 1200) {
+    canvw = 1200;
+  }
   let canvh = (canvw * 2) / 3;
   let canv = createCanvas(canvw, canvh);
   // bkDrop = loadImage("bkDrop.jpeg");
