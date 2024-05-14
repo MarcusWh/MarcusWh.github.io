@@ -21,6 +21,8 @@
       <button id="pan1" class="dropbtn">photosphere 1</button>
       <button id="pan2" class="dropbtn">photosphere 2</button>
       <button id="pan3" class="dropbtn">photosphere 3</button>
+      <button id="pan4" class="dropbtn">photosphere 4</button>
+      <button id="pan5" class="dropbtn">photosphere 5</button>
     </div>
   </div>
   <div
@@ -55,5 +57,15 @@
   pan3.addEventListener("click", pan3click);
   function pan3click() {
     viewer.setPanorama("pan3.jpg");
+  }
+  let pan4 = document.getElementById("pan4");
+  pan4.addEventListener("click", pan4click);
+  function pan4click() {
+    viewer.setPanorama("pan4.jpg");
+  }
+  let pan5 = document.getElementById("pan5");
+  pan5.addEventListener("click", pan5click);
+  function pan5click() {
+    viewer.setPanorama("pan5.jpg");
   }
 </script>
