@@ -213,8 +213,8 @@ function copyQuestions() {
 function setup() {
   // frameRate(10);
   let canvw = div.offsetWidth;
-  if (canvw > 1200) {
-    canvw = 1200;
+  if (canvw > 1000) {
+    canvw = 1000;
   }
   let canvh = (canvw * 2) / 3;
   let canv = createCanvas(canvw, canvh);
@@ -350,6 +350,9 @@ function reorder() {
 
 function windowResized() {
   canvw = div.offsetWidth;
+  if (canvw > 1000) {
+    canvw = 1000;
+  }
   canvh = (canvw * 2) / 3;
   resizeCanvas(canvw, canvh);
   for (let i = 0; i < tiles.length; i++) {
