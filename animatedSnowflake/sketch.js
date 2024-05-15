@@ -27,6 +27,7 @@ function draw() {
   // orderOfRotation = orderSlider.value();
 
   background(19, 42, 56);
+  rect(0, 0, width, height);
   translate(width / 2, height / 2);
   for (let order = 0; order < orderOfRotation; order++) {
     for (let i = 0; i < lineArray.length; i++) {
