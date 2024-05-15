@@ -1,0 +1,15 @@
+body {
+  font-family: "helvitica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  background-color: rgb(19, 42, 56);
+  text-align: left;
+}
+
+.slideContainer {
+  display: flex;
+  vertical-align: middle;
+  gap: 20px;
+}
