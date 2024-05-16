@@ -9,14 +9,8 @@ body {
 }
 
 .slideContainer {
+  width: 100%;
   display: flex;
   vertical-align: middle;
   gap: 20px;
 }
-
-/* .canvasContainer {
-  border: solid;
-  
-  border-width: 2px;
-  border-color: white;
-} */

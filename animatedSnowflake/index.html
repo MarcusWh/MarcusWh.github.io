@@ -19,7 +19,7 @@
   <body>
     <h2>Animated snowflake</h2>
     <div class="slideContainer">
-      <p>Order of rotation:</p>
+      <p style="width: 250px">Order of rotation:</p>
       <input
         type="range"
         min="1"
@@ -29,8 +29,11 @@
         id="orderSlider"
         oninput="updateSlider(this.value)"
       />
+      <p style="width: 100%; text-align: right">
+        Draw a pattern in the middle of the box.
+      </p>
     </div>
-    <p>Draw a pattern in the middle of the box.</p>
+
     <div id="canvasContainer" class="canvasContainer"></div>
     <p>
       <a
