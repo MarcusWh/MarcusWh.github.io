@@ -12,7 +12,7 @@ function setup() {
   if (wid > 1000) {
     wid = 1000;
   }
-  let cnv = createCanvas(wid, wid * 0.7);
+  let cnv = createCanvas(wid, wid * 0.6);
   cnv.parent("canvasContainer");
   pixelDensity(1);
   colorMode(HSB);
@@ -54,5 +54,5 @@ function windowResized() {
   if (wid > 1000) {
     wid = 1000;
   }
-  resizeCanvas(wid, wid * 0.8);
+  resizeCanvas(wid, wid * 0.6);
 }
