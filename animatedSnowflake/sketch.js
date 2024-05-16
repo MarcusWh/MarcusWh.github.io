@@ -9,6 +9,9 @@ let shapeStarted = false;
 
 function setup() {
   let wid = div.offsetWidth;
+  if (wid > 1000) {
+    wid = 1000;
+  }
   let cnv = createCanvas(wid, 600);
   cnv.parent("canvasContainer");
   angleMode(DEGREES);
@@ -83,6 +86,9 @@ function touchEnded() {
 
 function windowResized() {
   let wid = div.offsetWidth;
+  if (wid > 1000) {
+    wid = 1000;
+  }
   resizeCanvas(wid, 600);
 }
 
